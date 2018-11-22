@@ -2,28 +2,32 @@
 > A JavaScript library for adding loss to any page
 
 ## API ##
-* `loss.canvas(width=400, height=400)`: Return a `<canvas>` of specified size of loss.
+* `loss.canvas(palette="normal", width=400, height=400)`: Return a `<canvas>` of specified size of loss.
+Acceptabe `palette` values is "normal" and "inverse".
 * `loss.console()`: Print loss to the browser console.
 * `loss.html()`: Return a loss string suitable for use in HTML.
-* `loss.image(width=400, height=400)`: Return a PNG image of specified size of loss.
+* `loss.image(palette="normal", width=400, height=400)`: Return a JPEG image of specified size of loss.
+Acceptabe `palette` values is "normal" and "inverse".
 * `loss.string()`: Return a loss string.
 
 ## Usage ##
-Do note lots of ES6/ES2015 features have been used, so unless you transpile,
+Do note that ES6+ features have been used, so unless you transpile,
 a fairly modern browser is required.
 
-1. Load the script on your page
+1. Load your app script as a module
 ```html
-<script src="loss.js"></script>
+<script src="script.js"></script>
 ```
 
-2. Run a method
+2. Import the class and run the methods
 ```js
-// Also available via window.loss
+"use strict";
+
+import { loss } from "./loss.js";
 loss.string();  // typeof 'string'
 ```
 
 ## License ##
 [MIT](LICENSE)
 
-2016 Caleb Ely
+2016-2018 Caleb Ely
