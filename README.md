@@ -16,7 +16,7 @@ a fairly modern browser is required.
 
 1. Load your app script as a module
 ```html
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 ```
 
 2. Import the class and run the methods
